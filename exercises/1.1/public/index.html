@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <h1>list Film</h1>
+  <script>
+    // Fonction pour effectuer une requête GET vers votre API
+    function fetchFilmData() {
+        fetch('/film') // Utilisez l'URL de votre API si elle est différente
+            .then(response => response.json())
+            .then(data => {
+                const filmList = document.getElementById('filmList');
+                data.forEach(film => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                        <strong>${film.title}</strong><br>
+                        Durée: ${film.duration} minutes<br>
+                        Budget: $${film.budget} millions<br>
+                        Lien: <a href="${film.link}" target="_blank">Voir sur IMDb</a>
+                    `;
+                    filmList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Erreur lors de la récupération des données :', error));
+    }
+
+    // Appeler la fonction pour charger les films lorsque la page est chargée
+    window.onload = fetchFilmData;
+</script>
+</body>
+
+</html>
