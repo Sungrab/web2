@@ -26,7 +26,6 @@ const ListFilm = [
   },
 ];
 
-
 // Read all the pizzas from the menu
 router.get('/', (req, res, next) => {
   console.log('GET /film');
