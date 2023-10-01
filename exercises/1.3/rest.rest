@@ -1,0 +1,22 @@
+### Read all film
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/film
+
+
+### Read all film wil duration
+GET {{baseUrl}}/film?minimum-duration=140
+
+### find film with id
+GET {{baseUrl}}/film/2
+
+### add new film 
+POST {{baseUrl}}/film
+Content-Type: application/json
+
+{
+    "title": "test",
+    "duration": 100,
+    "budget": 100000,
+    "link": "https://www.imdb.com/title/tt0478970/?ref_=fn_al_tt_1"
+
+}
