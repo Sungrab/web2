@@ -1,0 +1,43 @@
+### Read all film
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/films
+
+
+### Read all film wil duration
+GET {{baseUrl}}/films?minimum-duration=140
+
+### find film with id
+GET {{baseUrl}}/films/2
+
+### add new film 
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title":"test",
+    "duration":100,
+    "budget":100000,
+    "link":"https://www.imdb.com/title/tt0478970/?ref_=fn_al_tt_1"
+
+}
+
+### film avec carectere
+GET {{baseUrl}}/films?caractere=a
+
+### sort by title
+GET {{baseUrl}}/films?order=title
+
+### Delete film identified by 2
+DELETE {{baseUrl}}/films/2
+
+### Update the film identified by 2
+PATCH {{baseUrl}}/films/2
+Content-Type: application/json
+
+{
+    "title":"test2",
+    "duration": 10,
+    "budget": 10,
+    "link": "test2"
+
+}
