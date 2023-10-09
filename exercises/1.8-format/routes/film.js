@@ -103,7 +103,7 @@ router.get('/:id', (req, res, next) => {
 // eslint-disable-next-line consistent-return
 router.post('/', (req, res) => {
   
-  const title = req?.body?.title?.length !== 0 ? req.body.duration : undefined;
+  const title = req?.body?.title?.length !== 0 ? req.body.title : undefined;
   const duration = req?.body?.duration?.length !== 0 ? req.body.duration : undefined;
   const budget = req?.body?.budget?.length !== 0 ? req.body.budget : undefined;
   const link = req?.body?.link?.length !== 0 ? req.body.link : undefined;
@@ -175,7 +175,7 @@ router.patch('/:id', (req, res) => {
 router.put('/:id', (req, res) => {
   const films = parse(jsonDbPath, ListFilm);
   const filmId = parseInt(req.params.id, 10);
-  const title = req?.body?.title?.length !== 0 ? req.body.duration : undefined;
+  const title = req?.body?.title?.length !== 0 ? req.body.title : undefined;
   const duration = req?.body?.duration?.length !== 0 ? req.body.duration : undefined;
   const budget = req?.body?.budget?.length !== 0 ? req.body.budget : undefined;
   const link = req?.body?.link?.length !== 0 ? req.body.link : undefined;
