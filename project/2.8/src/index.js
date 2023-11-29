@@ -50,8 +50,8 @@ const ListFilm = [
     const filmElement = document.createElement('div');
     filmElement.innerHTML = `
       <div class="card m-3 w-50  bg-info mt-2 p-2 h-50 ">
-      <img src="${film.photo}" class="card-img-top rounded" alt="${film.title}" style="max-width: 100%; h-50" id="image">
-        <div class="card-body">
+      <img src="${film.photo}" class="card-img-top rounded h-50" alt="${film.title}" style="max-width: 100%; " id="image">
+        <div class="card-body" if="filmElements>
           <h5 class="card-title">${film.title}</h5>
           <p class="card-text">Duration: ${film.duration} minutes</p>
           <p class="card-text">Budget: $${film.budget}</p>
@@ -63,3 +63,4 @@ const ListFilm = [
   
     return filmElement;
   }
+ 

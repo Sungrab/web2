@@ -65,3 +65,11 @@ const ListFilm = [
   
     return filmElement;
   }
+  function changeFilmElement(film){
+    const divElement = document.getElementById('filmElement');
+    const filmElement = document.createElement('div');
+    filmElement.innerHTML = `
+    <div class=
+    `
+
+}
